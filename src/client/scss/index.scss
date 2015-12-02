@@ -1,0 +1,40 @@
+/* INFO **
+** INFO */
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Import compass mixins */
+@import "compass/reset";
+// @import "compass/css3/box-sizing";
+
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Import fonts */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400);
+
+
+/*----------------------------------------------------------------------------*/
+/* Helper functions */
+$INKSCAPE-DEG : 360/255;
+$INKSCAPE-PER : 100/255;
+@function inkscape-hsl($h, $s, $l)
+{
+    @return hsl($h*$INKSCAPE-DEG,
+                $s*$INKSCAPE-PER,
+                $l*$INKSCAPE-PER);
+}
+
+
+/*----------------------------------------------------------------------------*/
+html,
+body
+{
+    width   : 100%;
+    height  : 100%;
+}
+
+
+/*----------------------------------------------------------------------------*/
+canvas
+{
+    display : block;
+    margin  : 20px auto;
+}
